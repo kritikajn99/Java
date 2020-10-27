@@ -1,0 +1,37 @@
+public class Pen
+{
+String PenColor;
+String Pentype;
+Pen() // Default Constructor
+{
+System.out.println("Default Constructor");
+}
+Pen(String PenColor,String Pentype) // Parameterized Constructor
+{
+this.PenColor = PenColor;
+this.Pentype = Pentype;
+}
+Pen(Pen p)
+{
+PenColor=p.PenColor;
+Pentype=p.Pentype;
+}
+public void disp()
+{
+System.out.println("Color of the Pen is : "+PenColor);
+System.out.println("Type of the Pen is : "+Pentype);
+}
+public static void main(String args[])
+{
+//Calling the parameterized constructor
+Pen p1 = new Pen();
+//Calling the parameterized constructor
+Pen p2 = new Pen("Blue","Gel");
+Pen p3 = new Pen("Black","Ball");
+p2.disp();
+p3.disp();
+//Calling the copy Constructor
+Pen p4 = new Pen(p2);// values of object p2 copied in p4
+p4.disp();
+}
+}

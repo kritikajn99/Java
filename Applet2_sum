@@ -1,0 +1,33 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.Applet;
+/*Coding of HTML File <applet code = add.class width= 200 height=200> </applet> */
+public class Applet2_sum extends Applet implements ActionListener
+{
+Button b1;
+TextField tf1;
+TextField tf2;
+TextField tf3;
+public void init( )
+{
+tf1=new TextField(20);
+tf2=new TextField(20);
+tf3=new TextField(20);
+b1=new Button(" add ");
+add(b1); add(tf1);add(tf2);add(tf3);
+b1.addActionListener(this);
+}
+public void actionPerformed(ActionEvent ae)
+{
+String s1=tf1.getText();
+int a=Integer.parseInt(s1);
+String s2=tf2.getText();
+int b=Integer.parseInt(s2);
+int c=a+b;
+tf3.setText(Integer.toString(c));
+}
+}
+/*
+<applet code=Applet2_sum width=400 height=400>
+</applet>
+*/
